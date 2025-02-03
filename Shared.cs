@@ -24,7 +24,7 @@ namespace RoseAPI
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier,user.Username),
+                new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
             };
             var token = new JwtSecurityToken(_configuration["Jwt:Issuer"],
                 _configuration["Jwt:Audience"],

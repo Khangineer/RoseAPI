@@ -64,19 +64,30 @@ namespace RoseAPI.Controllers
         public async Task<IActionResult> LoginWithMetaMask([FromForm] User user)
         {
             var users = await _context.User.ToListAsync();
+            var Shared = new Shared(this._context, this._config);
+            User userToAdd = user;
+            bool found = false;
             foreach (var us in users)
             {
                 if (user.WalletAddress == us.WalletAddress)
                 {
-                    return Ok(new {us});
+                    userToAdd = us;
+                    found = true;
                 }
             }
-            User userToAdd = user;
-            userToAdd.Id = Guid.NewGuid();
-            await _context.User.AddAsync(userToAdd);
-            await _context.SaveChangesAsync();
-
-            return Ok(new {userToAdd});
+            if (found)
+            {
+                var token = Shared.GenerateToken(userToAdd);
+                return Ok(new { token, userToAdd });
+            }
+            else
+            {
+                userToAdd.Id = Guid.NewGuid();
+                await _context.User.AddAsync(userToAdd);
+                await _context.SaveChangesAsync();
+                var token = Shared.GenerateToken(userToAdd);
+                return Ok(new { token, userToAdd });
+            }
         }
     }
 }

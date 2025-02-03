@@ -1,7 +1,13 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using RoseAPI.Entities;
+using System.Text;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+var config = builder.Configuration;
+var secret = config["Jwt:Secret"];
 
 // Add services to the container.
 
@@ -10,13 +16,41 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("CORSPolicy", policy =>
     {
-        policy.WithOrigins("http://localhost:7202")
+        policy.WithOrigins("http://localhost:4200")
                .AllowAnyMethod()
                .AllowAnyHeader()
                .AllowCredentials();
     });
 
 });
+
+builder.Services.AddAuthentication(auth =>
+{
+    auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    auth.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    auth.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(jwt =>
+{
+    jwt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+    {
+        /// <summary>Konfiguracja parametrów u¿ywanych do validacji tokenów</summary>
+        ValidateIssuer = true,
+        ValidateLifetime = true,
+        ValidateAudience = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret))
+    };
+});
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    });
 
 builder.Services.AddDbContext<RoseDBContext>(options =>
 {

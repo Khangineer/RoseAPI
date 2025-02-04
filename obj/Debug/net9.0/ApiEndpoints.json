@@ -33,6 +33,11 @@
         "IsRequired": false
       },
       {
+        "Name": "TemporaryData",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "Tasks",
         "Type": "System.Collections.Generic.List\u00601[[RoseAPI.Entities.Task, RoseAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": false
@@ -74,6 +79,11 @@
         "IsRequired": false
       },
       {
+        "Name": "TemporaryData",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "Tasks",
         "Type": "System.Collections.Generic.List\u00601[[RoseAPI.Entities.Task, RoseAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": false
@@ -111,6 +121,11 @@
       },
       {
         "Name": "WalletAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TemporaryData",
         "Type": "System.String",
         "IsRequired": false
       },

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RoseAPI.Entities;
 using System.Collections.Generic;
+using System.Text.Json;
 
 namespace RoseAPI.Controllers
 {
@@ -60,6 +61,24 @@ namespace RoseAPI.Controllers
         }
 
         [HttpPost]
+        [Route("loginWithCredentialsViaDesktop")]
+        public async Task<IActionResult> LoginWithCredentialsViaDesktop([FromForm] User user)
+        {
+            PasswordHasher<User> passwordHasher = new();
+            var Shared = new Shared(this._context, this._config);
+            var us = await Shared.Authenticate(user);
+            if (us != null)
+            {
+                var token = Shared.GenerateToken(us);
+                await _context.User.Where(eb => eb.Id == us.Id).ExecuteUpdateAsync(setters => setters.SetProperty(b => b.TemporaryData, "empty"));
+                await _context.User.Where(eb => eb.Id == us.Id).ExecuteUpdateAsync(setters => setters.SetProperty(b => b.TemporaryData, token));
+                return Ok(new { token, us });
+            }
+
+            return NotFound("user not found");
+        }
+
+        [HttpPost]
         [Route("loginWithMetaMask")]
         public async Task<IActionResult> LoginWithMetaMask([FromForm] User user)
         {
@@ -88,6 +107,15 @@ namespace RoseAPI.Controllers
                 var token = Shared.GenerateToken(userToAdd);
                 return Ok(new { token, userToAdd });
             }
+        }
+
+        [HttpPost]
+        [Route("getTemporaryData")]
+        public async Task<IActionResult> GetTemporaryData([FromBody] object us)
+        {
+            JsonElement user = (JsonElement)us;
+            var Id = user.GetProperty("Id").ToString();
+            return Ok(user);
         }
     }
 }

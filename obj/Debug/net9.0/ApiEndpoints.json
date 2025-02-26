@@ -1,8 +1,70 @@
 [
   {
     "ContainingType": "RoseAPI.Controllers.MainController",
+    "Method": "GetTemporaryData",
+    "RelativePath": "api/Main/getTemporaryData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "us",
+        "Type": "System.Object",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoseAPI.Controllers.MainController",
     "Method": "LoginWithCredentials",
     "RelativePath": "api/Main/loginWithCredentials",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HashedPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WalletAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TemporaryData",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Tasks",
+        "Type": "System.Collections.Generic.List\u00601[[RoseAPI.Entities.Task, RoseAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoseAPI.Controllers.MainController",
+    "Method": "LoginWithCredentialsViaDesktop",
+    "RelativePath": "api/Main/loginWithCredentialsViaDesktop",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

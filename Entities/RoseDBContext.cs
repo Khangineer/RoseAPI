@@ -7,7 +7,7 @@ namespace RoseAPI.Entities
         public RoseDBContext() { }
         public RoseDBContext(DbContextOptions<RoseDBContext> options) : base(options) { }
 
-        public DbSet<Task> Task { get; set; }
+        public DbSet<Quest> Quest { get; set; }
         public DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ using System.Text.Json;
 
 namespace RoseAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class MainController : ControllerBase
@@ -20,6 +22,7 @@ namespace RoseAPI.Controllers
             this._config = configuration;
         }
 
+        [AllowAnonymous]
         [HttpPost]
         [Route("register")]
         public async Task<IActionResult> Register([FromForm] User user)
@@ -44,6 +47,7 @@ namespace RoseAPI.Controllers
             return Ok(new { finished });
         }
 
+        [AllowAnonymous]
         [HttpPost]
         [Route("loginWithCredentials")]
         public async Task<IActionResult> LoginWithCredentials([FromForm] User user)
@@ -60,6 +64,7 @@ namespace RoseAPI.Controllers
             return NotFound("user not found");
         }
 
+        [AllowAnonymous]
         [HttpPost]
         [Route("loginWithCredentialsViaDesktop")]
         public async Task<IActionResult> LoginWithCredentialsViaDesktop([FromForm] User user)
@@ -78,6 +83,7 @@ namespace RoseAPI.Controllers
             return NotFound("user not found");
         }
 
+        [AllowAnonymous]
         [HttpPost]
         [Route("loginWithMetaMask")]
         public async Task<IActionResult> LoginWithMetaMask([FromForm] User user)
@@ -113,8 +119,20 @@ namespace RoseAPI.Controllers
         [Route("getTemporaryData")]
         public async Task<IActionResult> GetTemporaryData([FromBody] object us)
         {
-            JsonElement user = (JsonElement)us;
-            var Id = user.GetProperty("Id").ToString();
+            JsonElement json = (JsonElement)us;
+            User user = new User();
+            var id = json.GetProperty("Id").ToString();
+            var wa = json.GetProperty("WalletAddress").ToString();
+            if (wa == "")
+            {
+                user = await _context.User.Where(eb => eb.Id.ToString() == id).FirstOrDefaultAsync();
+                user.TemporaryData = "id";
+            }
+            if (id == "")
+            {
+                user = await _context.User.Where(eb => eb.WalletAddress.ToString() == wa).FirstOrDefaultAsync();
+                user.TemporaryData = "wa";
+            }
             return Ok(user);
         }
     }

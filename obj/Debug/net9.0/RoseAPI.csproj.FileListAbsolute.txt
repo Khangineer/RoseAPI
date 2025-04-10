@@ -152,3 +152,4 @@ C:\Users\aethi\source\repos\RoseAPI\obj\Debug\net9.0\RoseAPI.genruntimeconfig.ca
 C:\Users\aethi\source\repos\RoseAPI\obj\Debug\net9.0\ref\RoseAPI.dll
 C:\Users\aethi\source\repos\RoseAPI\obj\Debug\net9.0\RoseAPI.sourcelink.json
 C:\Users\aethi\source\repos\RoseAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\aethi\source\repos\RoseAPI\bin\Debug\net9.0\Newtonsoft.Json.dll

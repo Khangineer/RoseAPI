@@ -8,6 +8,6 @@
         public string? HashedPassword { get; set; }
         public string? WalletAddress { get; set; }
         public string? TemporaryData { get; set; }
-        public List<Task> Tasks { get; set; } = new List<Task>();
+        public List<Quest> Tasks { get; set; } = new List<Quest>();
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RoseAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+481de1d7411f2ab5a5d746ca0ff05cc95ed4d78e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dc110eecae0609abb562e38bef73edf691c7cac")]
 [assembly: System.Reflection.AssemblyProductAttribute("RoseAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RoseAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

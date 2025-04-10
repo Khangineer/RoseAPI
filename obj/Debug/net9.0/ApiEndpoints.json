@@ -55,7 +55,7 @@
       },
       {
         "Name": "Tasks",
-        "Type": "System.Collections.Generic.List\u00601[[RoseAPI.Entities.Task, RoseAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[RoseAPI.Entities.Quest, RoseAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": false
       }
     ],
@@ -101,7 +101,7 @@
       },
       {
         "Name": "Tasks",
-        "Type": "System.Collections.Generic.List\u00601[[RoseAPI.Entities.Task, RoseAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[RoseAPI.Entities.Quest, RoseAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": false
       }
     ],
@@ -147,7 +147,7 @@
       },
       {
         "Name": "Tasks",
-        "Type": "System.Collections.Generic.List\u00601[[RoseAPI.Entities.Task, RoseAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[RoseAPI.Entities.Quest, RoseAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": false
       }
     ],
@@ -193,8 +193,24 @@
       },
       {
         "Name": "Tasks",
-        "Type": "System.Collections.Generic.List\u00601[[RoseAPI.Entities.Task, RoseAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[RoseAPI.Entities.Quest, RoseAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoseAPI.Controllers.QuestController",
+    "Method": "GetUserQuests",
+    "RelativePath": "api/Quest/getuserquests",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "System.Object",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

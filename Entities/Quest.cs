@@ -1,6 +1,6 @@
 ﻿namespace RoseAPI.Entities
 {
-    public class Task
+    public class Quest
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

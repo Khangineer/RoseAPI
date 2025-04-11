@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{378AAD4E-2E58-41D4-8A18-20BBAB25B070}|RoseAPI.csproj|c:\\users\\aethi\\source\\repos\\roseapi\\controllers\\questcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{378AAD4E-2E58-41D4-8A18-20BBAB25B070}|RoseAPI.csproj|solutionrelative:controllers\\questcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{378AAD4E-2E58-41D4-8A18-20BBAB25B070}|RoseAPI.csproj|c:\\users\\aethi\\source\\repos\\roseapi\\entities\\quest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{378AAD4E-2E58-41D4-8A18-20BBAB25B070}|RoseAPI.csproj|solutionrelative:entities\\quest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aethi\\source\\repos\\RoseAPI\\Migrations\\20250410201956_tableNameChange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250410201956_tableNameChange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{378AAD4E-2E58-41D4-8A18-20BBAB25B070}|RoseAPI.csproj|c:\\users\\aethi\\source\\repos\\roseapi\\controllers\\questcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{378AAD4E-2E58-41D4-8A18-20BBAB25B070}|RoseAPI.csproj|solutionrelative:controllers\\questcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{378AAD4E-2E58-41D4-8A18-20BBAB25B070}|RoseAPI.csproj|c:\\users\\aethi\\source\\repos\\roseapi\\entities\\rosedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{378AAD4E-2E58-41D4-8A18-20BBAB25B070}|RoseAPI.csproj|c:\\users\\aethi\\source\\repos\\roseapi\\entities\\configurations\\questconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{378AAD4E-2E58-41D4-8A18-20BBAB25B070}|RoseAPI.csproj|solutionrelative:entities\\configurations\\questconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{378AAD4E-2E58-41D4-8A18-20BBAB25B070}|RoseAPI.csproj|c:\\users\\aethi\\source\\repos\\roseapi\\entities\\quest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{378AAD4E-2E58-41D4-8A18-20BBAB25B070}|RoseAPI.csproj|solutionrelative:entities\\quest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{378AAD4E-2E58-41D4-8A18-20BBAB25B070}|RoseAPI.csproj|c:\\users\\aethi\\source\\repos\\roseapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -131,32 +127,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "20250410201956_tableNameChange.cs",
-              "DocumentMoniker": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\Migrations\\20250410201956_tableNameChange.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250410201956_tableNameChange.cs",
-              "ToolTip": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\Migrations\\20250410201956_tableNameChange.cs",
-              "RelativeToolTip": "Migrations\\20250410201956_tableNameChange.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T20:19:56.553Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "QuestController.cs",
               "DocumentMoniker": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\Controllers\\QuestController.cs",
               "RelativeDocumentMoniker": "Controllers\\QuestController.cs",
               "ToolTip": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\Controllers\\QuestController.cs",
               "RelativeToolTip": "Controllers\\QuestController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAUwBcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T13:23:31.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Entities\\User.cs",
@@ -164,25 +147,24 @@
               "RelativeToolTip": "Entities\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T09:39:06.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T09:39:06.707Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Quest.cs",
               "DocumentMoniker": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\Entities\\Quest.cs",
               "RelativeDocumentMoniker": "Entities\\Quest.cs",
               "ToolTip": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\Entities\\Quest.cs",
               "RelativeToolTip": "Entities\\Quest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-23T09:40:53.656Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -190,12 +172,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAjwB8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T09:30:55.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T09:30:55.693Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "ViabilityController.cs",
               "DocumentMoniker": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\Controllers\\ViabilityController.cs",
               "RelativeDocumentMoniker": "Controllers\\ViabilityController.cs",
@@ -207,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -219,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Shared.cs",
               "DocumentMoniker": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\Shared.cs",
               "RelativeDocumentMoniker": "Shared.cs",
@@ -231,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "RoseAPI.http",
               "DocumentMoniker": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\RoseAPI.http",
               "RelativeDocumentMoniker": "RoseAPI.http",
@@ -243,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "UserConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\Entities\\Configurations\\UserConfiguration.cs",
               "RelativeDocumentMoniker": "Entities\\Configurations\\UserConfiguration.cs",
@@ -263,8 +244,7 @@
               "RelativeToolTip": "Entities\\Configurations\\QuestConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T09:43:10.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T09:43:10.985Z"
             },
             {
               "$type": "Document",
@@ -276,12 +256,11 @@
               "RelativeToolTip": "Entities\\RoseDBContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T09:36:23.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T09:36:23.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "MainController.cs",
               "DocumentMoniker": "C:\\Users\\aethi\\source\\repos\\RoseAPI\\Controllers\\MainController.cs",
               "RelativeDocumentMoniker": "Controllers\\MainController.cs",
@@ -289,8 +268,7 @@
               "RelativeToolTip": "Controllers\\MainController.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAcwHsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T09:32:29.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T09:32:29.881Z"
             }
           ]
         }

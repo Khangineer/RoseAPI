@@ -5,9 +5,11 @@ using RoseAPI.Entities;
 using System.Text;
 using System.Text.Json.Serialization;
 
+DotNetEnv.Env.Load();
+
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
-var secret = config["Jwt:Secret"];
+var secret = Environment.GetEnvironmentVariable("SECRET");
 
 // Add services to the container.
 
